@@ -1,0 +1,13 @@
+<router-outlet></router-outlet>
+<div *ngFor="let bloc of blocs">
+  {{ bloc.idBloc }}
+  {{ bloc.nomBloc }}
+  {{ bloc.capaciteBloc }}
+  {{ bloc.foyer?.idFoyer }} <!-- Display the associated foyer's ID -->
+  
+  <input type="submit" value="Update Bloc" (click)="updateBloc(bloc)">
+</div>
+<hr>
+<div *ngIf="showUpdateBlocForm">
+  <app-updatebloc-input [bloc]="blocToUpdate" (notification)="handleNotification($event)"></app-updatebloc-input>
+</div>

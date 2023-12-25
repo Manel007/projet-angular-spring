@@ -1,0 +1,25 @@
+<!-- Utilisation de Reactive Forms -->
+<form [formGroup]="blocForm" (ngSubmit)="onSubmit()">
+  <!-- Input pour le nom du Bloc -->
+  <div>
+    <label for="nomBloc">Nom Bloc</label>
+    <input type="text" id="nomBloc" name="nomBloc" formControlName="nomBloc" required>
+  </div>
+
+  <!-- Input pour la capacité du Bloc -->
+  <div>
+    <label for="capaciteBloc">Capacité Bloc</label>
+    <input type="number" id="capaciteBloc" name="capaciteBloc" formControlName="capaciteBloc" required>
+  </div>
+
+  <!-- Sélecteur pour affecter le Bloc à un Foyer -->
+  <div>
+    <label for="foyer">Assigner à Foyer</label>
+    <select id="foyer" name="foyer" formControlName="foyer" multiple>
+      <option *ngFor="let f of foyers" [ngValue]="f">{{ f.nomFoyer }}</option>
+    </select>
+  </div>
+
+  <!-- Bouton pour soumettre le formulaire -->
+  <button type="submit">Ajouter Bloc</button>
+</form>

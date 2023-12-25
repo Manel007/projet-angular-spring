@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>Test</head>
+  <div *ngFor='let blocWithChambres of blocsWithChambres'> 
+    <table>
+      <tr><td>********************************</td></tr>
+      <tr>
+        <td><b>id bloc</b></td>
+        <td>{{ blocWithChambres.bloc.idBloc }}</td>
+      </tr>
+      <tr>
+        <td><b>nom bloc</b></td>
+        <td>{{ blocWithChambres.bloc.nomBloc }}</td>
+      </tr>
+      <tr>
+        <td><b>capacite bloc</b></td>
+        <td>{{ blocWithChambres.bloc.capaciteBloc }}</td>
+      </tr>
+      
+    </table>
+    <div *ngFor='let chambre of blocWithChambres.chambres'>
+      <table>
+        <tr><td>-----------------------</td></tr>
+        <tr>
+          <TD></TD>
+          <td>id chambre</td>
+          <td>{{ chambre.idChambre }}</td>
+        </tr>
+        <tr>
+          <TD></TD>
+          <td>numero chambre</td>
+          <td>{{ chambre.numeroChambre }}</td>
+        </tr>
+        <tr>
+          <TD></TD>
+          <td>type chambre</td>
+          <td>{{ chambre.typeChambre }}</td>
+        </tr>
+        <td>-----------------------</td>
+      </table>
+    </div>
+  </div>
+</html>

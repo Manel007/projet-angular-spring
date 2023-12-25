@@ -1,0 +1,13 @@
+<!-- updatebloc-input.component.html -->
+<p>Update Bloc Input Component Works!</p>
+<form #f="ngForm">
+  <label>ID</label>
+  <input type="number" name="idBloc" [(ngModel)]="bloc.idBloc" disabled>
+  <label>Nom Bloc</label>
+  <input type="text" name="nomBloc" [(ngModel)]="bloc.nomBloc">
+  <label>Capacite Bloc</label>
+  <input type="number" name="capaciteBloc" [(ngModel)]="bloc.capaciteBloc">
+
+
+  <input type="submit" value="Update" (click)="updateBloc()">
+</form>
