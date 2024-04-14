@@ -20,7 +20,7 @@ constructor(private http: HttpClient){
     return this.http.get<Bloc[]>(`${this.baseUrl}/findAll`);
   }
 
-  
+/*  
   getBlocById(id: any): Observable<Bloc> {
     return this.http.get<Bloc>(`${this.baseUrl}/findById/${id}`);
   }
@@ -55,6 +55,6 @@ constructor(private http: HttpClient){
         })
       );
   }
-  
+  */
 }
 

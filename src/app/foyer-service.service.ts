@@ -8,6 +8,7 @@ import { Foyer } from './model/Foyer';
   providedIn: 'root'
 })
 export class FoyerServiceService {
+  /*
   private baseUrl = 'http://localhost:8182/api/foyers';
 
   constructor(private http: HttpClient) {}
@@ -52,5 +53,5 @@ export class FoyerServiceService {
  //    const params = { nomBloc, nomFoyer };
 //     return this.http.put<Bloc>(`${this.baseUrl}/affecterBlocAFoyer`, null, { params });
 //   }
-  
+  */
 }
